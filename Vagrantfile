@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "perk/ubuntu-2204-arm64"
   config.vm.provider "qemu" do |qemu|
-  config.vm.synced_folder "/Users/hyunsoocho/Documents/Python-Rest-API", "/vagrant", type: "rsync", rsync__auto: true
+  config.vm.synced_folder "/Users/hyunsoocho/Documents/Python-Rest-API", "/vagrant", type: "rsync", rsync__auto: true, rsync__reverse: true
 
     # set the port of your preference
     qemu.ssh_port = "8000"
